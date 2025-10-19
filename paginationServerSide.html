@@ -1,0 +1,39 @@
+<template>
+
+    <template lwc:if={showData}>
+        <template for:each={accountList} for:item="account">
+            <lightning-card key={account.Name}>
+                <lightning-layout>
+                    <lightning-layout-item >
+                
+                   <P> Name : {account.Name} </P>
+                   <p> Industry : {account.Industry} </p>
+                   <p> Phone : {account.Phone} </p>
+                   <p> Website : {account.Website} </p>
+
+                
+                </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+
+        </template>
+        <lightning-card>
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-button label="Previous" onclick={handlePrevious} disabled={showPreviousBtn}>
+
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button label="Next" onclick={handleNext} disabled={showNextBtn} >
+                    
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    </template>
+    
+
+
+
+</template>
